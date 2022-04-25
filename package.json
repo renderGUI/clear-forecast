@@ -1,0 +1,31 @@
+{
+  "name": "clear-forecast",
+  "version": "1.0.0",
+  "description": "Minimalist weather application.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renderGUI/clear-forecast.git"
+  },
+  "author": "Ismael Huerta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renderGUI/clear-forecast/issues"
+  },
+  "homepage": "https://github.com/renderGUI/clear-forecast#readme",
+  "dependencies": {
+    "apicache": "^1.6.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "needle": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -5,8 +5,6 @@ const weatherOuput = document.getElementById("weather-output");
 const cityOutput = document.getElementById("city-output");
 const conditionsOutput = document.getElementById("conditions-output");
 
-const API_KEY = "ENTER YOUR KEY HERE";
-
 // FUNCTION FOR RETRIEVING LOCATION KEY BASED ON ENTERED CITY
 async function getCurrentWeather() {
   const enteredCity = inputField.value;
@@ -16,12 +14,7 @@ async function getCurrentWeather() {
     return;
   }
 
-  let baseEndpoint = new URL("https://api.openweathermap.org/data/2.5/weather");
-
-  baseEndpoint.searchParams.set("q", enteredCity);
-  baseEndpoint.searchParams.set("units", "imperial");
-  baseEndpoint.searchParams.set("appid", API_KEY);
-  const endpoint = baseEndpoint.toString();
+  const endpoint = `/api?q=${enteredCity}&units=imperial`;
 
   const response = await fetch(endpoint);
   const data = response.json();
